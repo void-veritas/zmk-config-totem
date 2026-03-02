@@ -1,23 +1,23 @@
 include:
   # Classic (no dongle) - left is central with ZMK Studio
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: totem_left
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: classic-totem_left-seeeduino_xiao_ble-zmk
+    artifact-name: classic-totem_left-xiao_ble-zmk
   # Right is always peripheral - same firmware for both setups
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: totem_right
   # Dongle (Prospector) - central with ZMK Studio
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: totem_dongle prospector_adapter
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   # Dongle setup - left as peripheral (override default central role)
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: totem_left
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    artifact-name: dongle-totem_left-seeeduino_xiao_ble-zmk
+    artifact-name: dongle-totem_left-xiao_ble-zmk
   # Settings reset (shared)
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: settings_reset
